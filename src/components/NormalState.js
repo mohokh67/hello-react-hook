@@ -18,9 +18,11 @@ export default class NormalState extends Component {
     return (
       <div>
         <TheNavbar />
-        <p>My name is {this.state.name}</p>
+        <p>Hello {this.state.name}</p>
         <input onChange={this.handleChange} />
       </div>
     )
   }
 }
+
+

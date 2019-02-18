@@ -4,14 +4,14 @@ import TheNavbar from './TheNavbar';
 
 export default class NormalLifecycle extends Component {
   state = {
-    people: []
+    username: ''
   }
 
   componentDidMount() {
-    axios.get(`https://jsonplaceholder.typicode.com/users`)
+    axios.get(`https://jsonplaceholder.typicode.com/users/1`)
       .then(res => {
-        const people = res.data;
-        this.setState({ people });
+        const username = res.data.name;
+        this.setState({ username });
       })
   }
 
@@ -19,11 +19,8 @@ export default class NormalLifecycle extends Component {
     return (
       <div>
         <TheNavbar />
-        <ul>
-          { this.state.people.map(person => <li key={person.id}>{person.name}</li>)}
-        </ul>
+        <p>User name: <span>{this.state.username}</span></p>
       </div>
-
     )
   }
 }

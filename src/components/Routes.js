@@ -8,7 +8,7 @@ import UseEffectHook from './UseEffectHook'
 const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/normal-state" component={NormalState} />
+      <Route exact path="/" component={NormalState} />
       <Route exact path="/usestate-hook" component={UseStateHook} />
       <Route exact path="/normal-lifecyle" component={NormalLifecycle} />
       <Route exact path="/useeffect-hook" component={UseEffectHook} />
